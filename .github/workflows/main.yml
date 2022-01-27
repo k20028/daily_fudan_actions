@@ -1,14 +1,14 @@
 name: "Daily Fudan"
 
 on:
-  schedule: # scheduled at (UTC+8) everyday
+  schedule: 
     - cron: "30 19 * * *"
     - cron: "14 7 * * *"
   workflow_dispatch:
 
 env:
   RUN_ENV: 'prod'
-  TZ: 'Asia/Shanghai'
+  TZ: 'Asia/Taipei'
   FUCK_GH_PAT: ${{ secrets.GH_PAT }}
   
 jobs:
